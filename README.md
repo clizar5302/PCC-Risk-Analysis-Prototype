@@ -21,26 +21,29 @@ To run this program, you need:
 You can install the required libraries using pip:
 pip install pandas numpy
 
-Usage
+## Usage
 
 1. Import the necessary libraries:
-import pandas as pd
-import numpy as np
-from datetime import datetime
-
 2. Load your data into a Pandas DataFrame.
 3. Define the function to calculate the Extended Risk Score.
 4. Run the score calculation and sorting logic as provided in the main script.
 5. Review the results, including the top 5 riskiest customers and normalized risk scores.
 
-Example
+## Example
 
 Here’s a brief example of how the calculation is performed:
 current_date = datetime.now()
 df['Extended Risk Score'] = df.apply(lambda row: calculate_risk_score(row, current_date), axis=1)
 
-Results
+## Results
 
 The program outputs:
 • The top 5 customers based on their Extended Risk Score.
-• The normalized risk scores for a better understanding of risk levels.
+  a. The normalized risk scores for a better understanding of risk levels.
+• the top 5 customers in order of:
+  a. size of loan
+  b. AR Turn Days
+  c. AR Turn Days compared with AR Turn Historical Average
+  d. Dilution
+  e. Dilution compared with Historical Average
+
