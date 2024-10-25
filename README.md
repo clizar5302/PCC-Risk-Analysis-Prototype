@@ -19,8 +19,6 @@ To run this program, you need:
 - Any additional libraries as specified in the code
 
 You can install the required libraries using pip:
-
-```bash
 pip install pandas numpy
 
 Usage
