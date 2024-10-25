@@ -29,21 +29,23 @@ pip install pandas numpy
 4. Run the score calculation and sorting logic as provided in the main script.
 5. Review the results, including the top 5 riskiest customers and normalized risk scores.
 
-## Example
-
-Here’s a brief example of how the calculation is performed:
-current_date = datetime.now()
-df['Extended Risk Score'] = df.apply(lambda row: calculate_risk_score(row, current_date), axis=1)
-
 ## Results
 
 The program outputs:
-• The top 5 customers based on their Extended Risk Score.
-  a. The normalized risk scores for a better understanding of risk levels.
-• the top 5 customers in order of:
-  a. size of loan
-  b. AR Turn Days
-  c. AR Turn Days compared with AR Turn Historical Average
-  d. Dilution
-  e. Dilution compared with Historical Average
+
+- The top 5 customers based on their Extended Risk Score.
+  - The normalized risk scores for a better understanding of risk levels.
+- The top 5 customers in order of:
+  1. Size of loan
+  2. AR Turn Days
+  3. AR Turn Days compared with AR Turn Historical Average
+  4. Dilution
+  5. Dilution compared with Historical Average
+
+## Example
+
+Here’s a brief example of how the calculation is performed:
+```bash
+current_date = datetime.now()
+df['Extended Risk Score'] = df.apply(lambda row: calculate_risk_score(row, current_date), axis=1)
 
